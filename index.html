@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM_CORE_INTERFACE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="matrix-canvas"></canvas>
+
+    <div id="boot-sequence">
+        <p id="boot-text">Sistem çekirdeğiyle bağlantı kuruluyor...</p>
+        <div class="progress-bar">
+            <div class="progress-bar-inner"></div>
+        </div>
+    </div>
+
+    <div id="terminal-window" class="hidden">
+        <div class="title-bar">
+            <div class="buttons">
+                <div class="btn close"></div>
+                <div class="btn min"></div>
+                <div class="btn max"></div>
+            </div>
+            <span>ROOT_SHELL:/dev/tty1</span>
+        </div>
+        <div id="terminal-content">
+            <div id="terminal-output"></div>
+            <div class="input-line">
+                <span class="prompt">></span>
+                <span class="cursor">_</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
