@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM_CORE_INTERFACE | Hacker Giriş/Kayıt</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="matrix-canvas"></canvas>
+    <div id="auth-screen">
+        <div class="auth-tabs">
+            <button id="show-login" class="active">Giriş</button>
+            <button id="show-register">Kayıt</button>
+        </div>
+        <div id="login-form" class="auth-form">
+            <h2>Giriş Yap</h2>
+            <input type="text" id="login-username" placeholder="Kullanıcı Adı" autocomplete="username">
+            <input type="password" id="login-password" placeholder="Parola" autocomplete="current-password">
+            <button id="login-btn">Giriş Yap</button>
+            <div class="auth-message" id="login-message"></div>
+        </div>
+        <div id="register-form" class="auth-form hidden">
+            <h2>Kayıt Ol</h2>
+            <input type="text" id="register-fullname" placeholder="Ad Soyad" autocomplete="name">
+            <input type="text" id="register-username" placeholder="Kullanıcı Adı" autocomplete="username">
+            <input type="password" id="register-password" placeholder="Parola" autocomplete="new-password">
+            <input type="password" id="register-password2" placeholder="Parolayı Onayla" autocomplete="new-password">
+            <button id="register-btn">Kayıt Ol</button>
+            <div class="auth-message" id="register-message"></div>
+        </div>
+    </div>
+    <!-- Terminal ve diğer içerikler giriş sonrası açılır -->
+    <div id="boot-sequence" class="hidden">
+        <p id="boot-text">Sistem çekirdeğiyle bağlantı kuruluyor...</p>
+        <div class="progress-bar">
+            <div class="progress-bar-inner"></div>
+        </div>
+    </div>
+    <div id="terminal-window" class="hidden">
+        <div class="title-bar">
+            <div class="buttons">
+                <div class="btn close"></div>
+                <div class="btn min"></div>
+                <div class="btn max"></div>
+            </div>
+            <span>ROOT_SHELL:/dev/tty1</span>
+        </div>
+        <div id="terminal-content">
+            <div id="terminal-output"></div>
+            <div class="input-line">
+                <span class="prompt">></span>
+                <span class="cursor">_</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
